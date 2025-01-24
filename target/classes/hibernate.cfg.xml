@@ -1,0 +1,23 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración de la conexión -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/refugio</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- Dialecto para MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Sincronización del esquema -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Logs para depuración -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Mapeo de entidades -->
+        <mapping class="com.refugio.model.Animal"/>
+        <mapping class="com.refugio.model.Familia"/>
+    </session-factory>
+</hibernate-configuration>
